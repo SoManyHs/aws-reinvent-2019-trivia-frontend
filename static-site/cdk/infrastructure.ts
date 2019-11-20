@@ -22,11 +22,11 @@ const app = new cdk.App();
 new TriviaGameInfrastructureStack(app, 'TriviaGameStaticSiteInfraTest', {
     domainName: 'hsing-hui-demo.reinvent-trivia.com',
     siteSubDomain: 'test',
-    env: { account: '794715269151', region: 'us-east-1' }
+    env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-1' }
 });
 new TriviaGameInfrastructureStack(app, 'TriviaGameStaticSiteInfraProd', {
     domainName: 'hsing-hui-demo.reinvent-trivia.com',
     siteSubDomain: 'www',
-    env: { account: '794715269151', region: 'us-east-1' }
+    env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-1' }
 });
 app.synth();
