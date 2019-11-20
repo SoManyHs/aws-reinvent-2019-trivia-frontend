@@ -20,7 +20,7 @@ export class TriviaGameCfnPipeline extends cdk.Construct {
         super(parent, name);
 
         const pipeline = new codepipeline.Pipeline(this, 'Pipeline', {
-            pipelineName: 'reinvent-trivia-game-' + props.pipelineName,
+            pipelineName: 'reinvent-trivia-' + props.pipelineName,
         });
         this.pipeline = pipeline;
 

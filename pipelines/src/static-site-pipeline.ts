@@ -10,7 +10,7 @@ class TriviaGameStaticSitePipeline extends cdk.Stack {
         super(parent, name, props);
 
         const pipeline = new codepipeline.Pipeline(this, 'Pipeline', {
-            pipelineName: 'reinvent-trivia-game-static-site',
+            pipelineName: 'reinvent-trivia-frontend-static-site',
         });
 
         // Source
@@ -19,7 +19,7 @@ class TriviaGameStaticSitePipeline extends cdk.Stack {
         const sourceAction = new actions.GitHubSourceAction({
             actionName: 'GitHubSource',
             owner: 'SoManyHs',
-            repo: 'aws-reinvent-2019-trivia-game',
+            repo: 'aws-reinvent-2019-trivia-frontend',
             oauthToken: githubAccessToken,
             output: sourceOutput
         });
