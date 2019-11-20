@@ -5,7 +5,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "synth-static-site-pipeline": "cdk synth -o build --app 'node src/static-site-pipeline.js'",
-    "deploy-static-site-pipeline": "cdk deploy --app 'node src/static-site-pipeline.js'",
+    "deploy-static-site-pipeline": "cdk deploy --app 'node src/static-site-pipeline.js'"
   },
   "devDependencies": {
     "@types/node": "^12.12.5",

@@ -14,7 +14,7 @@ class TriviaGameStaticSitePipeline extends cdk.Stack {
         });
 
         // Source
-        const githubAccessToken = cdk.SecretValue.secretsManager('TriviaGitHubToken');
+        const githubAccessToken = cdk.SecretValue.secretsManager('FrontendTriviaGitHubToken');
         const sourceOutput = new codepipeline.Artifact('SourceArtifact');
         const sourceAction = new actions.GitHubSourceAction({
             actionName: 'GitHubSource',
