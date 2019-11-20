@@ -128,7 +128,7 @@ a {
 .card > .back {
     -webkit-transform: rotateY(180deg) !important;
     transform: rotateY(180deg) !important;
-    background-color: #007DBC;
+    background-color: #00bc7a;
     color: #FFFFFF;
     font-size: 36px;
     font-weight: 300;
